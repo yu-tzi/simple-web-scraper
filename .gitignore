@@ -1,0 +1,19 @@
+# Virtual Environment
+/venv/
+
+# Django Migration Files
+*/migrations/*
+
+# Local Settings
+/local_settings.py
+
+# IDE/Editor Files
+/.idea/
+/.vscode/
+
+# Compiled Python Files
+*.pyc
+__pycache__/
+
+# Environment Variables
+/.env
