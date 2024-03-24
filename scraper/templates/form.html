@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>simple-web-scraper</title>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">simple-web-scraper</h1>
+    </header>
+    <main>
+        <div style="display:flex; flex-direction: row; justify-content: center;">
+            <form method="post" style="display:flex; flex-direction: column; justify-content: center; gap: 10px; align-items: center;" action="{% url 'index' %}">
+                {% csrf_token %}
+                <label for="input">Enter the site to scrape 🔽 </label>
+                <input id="input" style="width:300px;" name="url" placeholder="https://example.com"/>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p style="text-align: center;">BY yu-tzi</p>
+    </footer>
+</body>
+</html>

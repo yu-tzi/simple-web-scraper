@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def index(req):
-    return HttpResponse('Hello world !')
-# render the form
-# process the URL and scrape the webpage
+def index(request):
+    if request.method == "POST":
+        url = request.POST.get('url')
+        return HttpResponse(HttpResponse(f"URL submitted: {url}"))
+    return render(request, 'form.html')
