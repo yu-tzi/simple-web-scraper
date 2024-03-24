@@ -15,7 +15,7 @@ def index(request):
             contents = html.find_all('p')
             # convert p into text
             texts = [p.get_text() for p in contents]
-            renderContent = '<br>'.join(texts)
-            return HttpResponse(f"Scraped text: {renderContent}")
+            renderContent = '\n'.join(texts)
+            return render(request, 'index.html', { 'renderContent': renderContent})
         return HttpResponse(HttpResponse(f"URL submitted: {url} but fetch data error"))
-    return render(request, 'form.html')
+    return render(request, 'index.html')
